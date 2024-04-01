@@ -44,6 +44,14 @@ Bu sayfada, seçilen şehre ait bazı sayısal hava durumu bilgileri grafiklerle
 Ana ekranda input kısmına eğer kullanıcının girdiği şehir ismi api verilerindeki şehir isimlerinden herhangi biriyle eşleştirilemediyse ya da kullanıcı şehrin bulunması için yeterli sayıda harf girişi yapmadıysa (3) kullanıcıya kırmızı renkte "Lütfen geçerli bir şehir adı girin" mesajı gösterilir.
 Veriler yüklenirken, React Native'in ActivityIndicator bileşeni kullanılarak yükleniyor ikonu döndürülür. Eğer API'den veri gelmezse, ekranda kırmızı renkte "Veriler yüklenirken bir hata oluştu. Lütfen uygulamayı yeniden başlatın." şeklinde bir uyarı mesajı görüntülenir. Bu durumda kullanıcıya uygulamayı yeniden başlatması tavsiye edilir. 
 
+<div style="display: flex;">
 
+</div>
 
+## Responsive Tasarım
 
+<div style="display: flex;">
+<img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/9ef03714-25b1-43ed-91df-9b5dbb5f1ec1" alt="Resim 1" style="width: 20%; margin-right: 10px;">
+<img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/8c6dddd2-b750-4242-a66c-9827be196819" alt="Resim 1" style="width: 20%; margin-right: 10px;">
+<img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/26a6b655-c57e-4c3b-9b8a-ffedc09a8911" alt="Resim 1" style="width: 20%; margin-right: 10px;">
+</div>
