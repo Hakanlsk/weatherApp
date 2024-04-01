@@ -34,20 +34,16 @@ Bu sayfada, seçilen şehre ait etkinlik bilgileri kategorilere ayrılarak liste
 ## Bazı Hava Durumu Bilgilerinin Grafiklerle Gösterilmesi
 
 Bu sayfada, seçilen şehre ait bazı sayısal hava durumu bilgileri grafiklerle sunularak görselleştirilir. Grafikler sayesinde kullanıcılar hava durumunu daha kolay anlayabilir ve kararlarını buna göre verebilirler. Örneğin, sıcaklık grafiği ile hava sıcaklığının zaman içinde nasıl değiştiğini görebilirler.
+
 <div style="display: flex;>
-  <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/b6f46217-74fa-4c4a-9727-e4eeae1e643f" alt="Resim 1" style="width: 20%; margin-right: 10px;">
-  <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/76f61f6c-bf9c-4b5c-83bb-383b4038adb2" alt="Resim 1" style="width: 20%; margin-right: 10px;">
+    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/1c00f242-2b93-4c56-a4df-ce0fbbf6c958" alt="Resim 7" style="width: 20%; margin-right: 10px;">
+    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/76f61f6c-bf9c-4b5c-83bb-383b4038adb2" alt="Resim 8" style="width: 20%; margin-right: 10px;">
 </div>
 
 ## Uyarı Mesajları ve Verilerin Yükleniyor Durumda Olduğu Bilgisi
 Ana ekranda input kısmına eğer kullanıcının girdiği şehir ismi api verilerindeki şehir isimlerinden herhangi biriyle eşleştirilemediyse ya da kullanıcı şehrin bulunması için yeterli sayıda harf girişi yapmadıysa (3) kullanıcıya kırmızı renkte "Lütfen geçerli bir şehir adı girin" mesajı gösterilir.
 Veriler yüklenirken, React Native'in ActivityIndicator bileşeni kullanılarak yükleniyor ikonu döndürülür. Eğer API'den veri gelmezse, ekranda kırmızı renkte "Veriler yüklenirken bir hata oluştu. Lütfen uygulamayı yeniden başlatın." şeklinde bir uyarı mesajı görüntülenir. Bu durumda kullanıcıya uygulamayı yeniden başlatması tavsiye edilir. 
-<div style="display: flex;>
-  <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/e743345e-5d63-431b-8537-33dc0b8b5f4d" alt="Resim 1" style="width: 20%; margin-right: 10px;">
-  <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/a87ec9f7-62d5-4cc1-8ad1-eca45212d11e" alt="Resim 1" style="width: 20%; margin-right: 10px;">
-  <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/a0d6dae8-c395-47da-ba21-70ff3109faac" alt="Resim 1" style="width: 20%; margin-right: 10px;">
 
-</div>
 
 
 
