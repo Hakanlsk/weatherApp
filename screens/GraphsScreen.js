@@ -53,9 +53,9 @@ const GraphsScreen = () => {
     : {}; // Create an empty object if otherDaysData is null
 
   const chartConfig = {
-    backgroundColor: "#ffffff",
-    backgroundGradientFrom: "#666685",
-    backgroundGradientTo: "#666685",
+    backgroundGradientFrom: "#ffffff",
+    backgroundGradientTo: "#ffffff",
+    backgroundGradientOpacity: 0.5,
     decimalPlaces: 0,
     color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
     style: {
@@ -79,6 +79,7 @@ const GraphsScreen = () => {
               width={wp("100%")}
               height={hp("35%")}
               chartConfig={chartConfig}
+              bezier
             />
             <Text style={styles.graphTitle}>UV Index Change</Text>
             <LineChart
@@ -86,6 +87,7 @@ const GraphsScreen = () => {
               width={wp("100%")}
               height={hp("35%")}
               chartConfig={chartConfig}
+              bezier
             />
           </View>
         ) : (
