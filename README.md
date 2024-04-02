@@ -7,7 +7,7 @@ Bu uygulama, kullanıcının konum bilgisini veya istediği şehri aratarak bir 
 <div style="display: flex;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/a554404c-a1eb-4b29-a1ba-2c874f15b7f4" alt="Resim 1" style="width: 20%; margin-right: 10px;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/26a6b655-c57e-4c3b-9b8a-ffedc09a8911" alt="Resim 1" style="width: 20%; margin-right: 10px;">
-    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/03951429-e8a5-47b0-82b2-e58e8082bd95" alt="Resim 1" style="width: 20%; margin-right: 10px;">
+    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/fa8e55bc-15df-4bff-aa81-be8f20fa75cb" alt="Resim 1" style="width: 20%; margin-right: 10px;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/0d417cdd-074e-4cd1-a3ca-d0d2008bf417" alt="Resim 1" style="width: 20%; margin-right: 10px;">
 </div>
 
@@ -37,7 +37,7 @@ Bu sayfada, seçilen şehre ait bazı sayısal hava durumu bilgileri grafiklerle
 
 <div style="display: flex;>
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/1c00f242-2b93-4c56-a4df-ce0fbbf6c958" alt="Resim 7" style="width: 20%; margin-right: 10px;">
-    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/76f61f6c-bf9c-4b5c-83bb-383b4038adb2" alt="Resim 8" style="width: 20%; margin-right: 10px;">
+    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/fa8e55bc-15df-4bff-aa81-be8f20fa75cb" alt="Resim 1" style="width: 20%; margin-right: 10px;">
 </div>
 
 ## Uyarı Mesajları ve Verilerin Yükleniyor Durumda Olduğu Bilgisi
@@ -49,9 +49,10 @@ Veriler yüklenirken, React Native'in ActivityIndicator bileşeni kullanılarak 
 </div>
 
 ## Responsive Tasarım
-
+Not: Bazı Font Size değerleri figma tasarımına uygunluk açısından ekran boyutuna göre değişiklik göstermek yerine sabit değerler tercih edilmiştir.
 <div style="display: flex;">
 <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/9ef03714-25b1-43ed-91df-9b5dbb5f1ec1" alt="Resim 1" style="width: 20%; margin-right: 10px;">
 <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/8c6dddd2-b750-4242-a66c-9827be196819" alt="Resim 1" style="width: 20%; margin-right: 10px;">
 <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/26a6b655-c57e-4c3b-9b8a-ffedc09a8911" alt="Resim 1" style="width: 20%; margin-right: 10px;">
+<img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/a2b1f0f4-e279-40f9-8ebc-73258ced598a" alt="Resim 1" style="width: 20%; margin-right: 10px;">  
 </div>
