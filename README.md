@@ -54,5 +54,5 @@ Not: Bazı Font Size değerleri figma tasarımına uygunluk açısından ekran b
 <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/9ef03714-25b1-43ed-91df-9b5dbb5f1ec1" alt="Resim 1" style="width: 20%; margin-right: 10px;">
 <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/8c6dddd2-b750-4242-a66c-9827be196819" alt="Resim 1" style="width: 20%; margin-right: 10px;">
 <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/26a6b655-c57e-4c3b-9b8a-ffedc09a8911" alt="Resim 1" style="width: 20%; margin-right: 10px;">
-<img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/a2b1f0f4-e279-40f9-8ebc-73258ced598a" alt="Resim 1" style="width: 20%; margin-right: 10px;">  
+<img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/a2b1f0f4-e279-40f9-8ebc-73258ced598a" alt="Resim 1" style="width: 35%; margin-right: 10px;">  
 </div>
