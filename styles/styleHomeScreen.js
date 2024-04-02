@@ -16,6 +16,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 25,
   },
+  titleText: {
+    fontSize: hp("4%"),
+    color: "#FAFAFA",
+    marginLeft: 10,
+  },
   icon: {
     width: 37,
     height: 24,

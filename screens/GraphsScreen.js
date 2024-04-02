@@ -19,7 +19,7 @@ import FailedLoadingData from "../components/FailedLoadingData";
 
 const GraphsScreen = () => {
   const { params } = useRoute();
-  const { otherDaysData } = params;
+  const { otherDaysData, city } = params;
 
   const labels = otherDaysData?.map((item) => {
     const date = new Date(item.date);
@@ -50,7 +50,7 @@ const GraphsScreen = () => {
           },
         ],
       }
-    : {}; // Create an empty object if otherDaysData is null
+    : {};
 
   const chartConfig = {
     backgroundGradientFrom: "#ffffff",
@@ -69,11 +69,11 @@ const GraphsScreen = () => {
       <ImageBackground
         source={background}
         resizeMode="cover"
-        style={{ flex: 1 }}
+        style={styles.backgroundImage}
       >
         {otherDaysData ? (
           <View style={styles.lineChartView}>
-            <Text style={styles.graphTitle}>Max Temperature</Text>
+            <Text style={styles.graphTitle}>{city} City - Max Temperature</Text>
             <LineChart
               data={maxTempData}
               width={wp("100%")}
@@ -81,7 +81,7 @@ const GraphsScreen = () => {
               chartConfig={chartConfig}
               bezier
             />
-            <Text style={styles.graphTitle}>UV Index Change</Text>
+            <Text style={styles.graphTitle}>{city} City - UV Index</Text>
             <LineChart
               data={uvIndexData}
               width={wp("100%")}

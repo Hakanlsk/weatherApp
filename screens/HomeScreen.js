@@ -35,8 +35,8 @@ const HomeScreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLocationServicesEnabled(await checkIfLocationEnabled());
-      const city = await getCurrentLocation();
-      setCityName(city);
+      const LocationCity = await getCurrentLocation();
+      setCityName(LocationCity);
     };
 
     fetchData();
@@ -79,11 +79,7 @@ const HomeScreen = () => {
         <View style={styles.homeContainer}>
           <View style={styles.titleView}>
             <Image style={styles.icon} source={appIcon} />
-            <Text
-              style={{ fontSize: hp("4%"), color: "#FAFAFA", marginLeft: 10 }}
-            >
-              iWeather
-            </Text>
+            <Text style={styles.titleText}>iWeather</Text>
           </View>
 
           <View

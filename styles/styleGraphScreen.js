@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#131319",
     paddingVertical: 10,
   },
+  backgroundImage: {
+    flex: 1,
+  },
   lineChartView: {
     flexDirection: "column",
     alignItems: "center",
