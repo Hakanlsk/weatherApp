@@ -82,7 +82,7 @@ const WeatherScreen = () => {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate("graphsScreen", { otherDaysData })
+                navigation.navigate("graphsScreen", { otherDaysData, city })
               }
               style={styles.activitiesAdviceButton}
             >
