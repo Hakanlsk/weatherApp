@@ -30,7 +30,7 @@ const WeatherScreen = () => {
 
   const [apiData, setApiData] = useState(null);
   const [probabilityOfRain, setProbabilityOfRain] = useState(null);
-  const [otherDaysData, setOtherDaysData] = useState("");
+  const [forecastData, setForecastData] = useState("");
 
   const generalWeatherData = async () => {
     try {
@@ -44,8 +44,7 @@ const WeatherScreen = () => {
   const weatherDetailsData = async () => {
     try {
       const weatherForecast = await weatherDetails(city);
-      setProbabilityOfRain(weatherForecast[0].chance_of_rain);
-      setOtherDaysData(weatherForecast);
+      setForecastData(weatherForecast);
     } catch (error) {
       console.error(error);
     }
@@ -65,8 +64,8 @@ const WeatherScreen = () => {
         style={styles.backgroundImage}
       >
         <View style={styles.viewContainer}>
-          {otherDaysData || apiData ? (
-            <WeatherOverview otherDaysData={otherDaysData} apiData={apiData} />
+          {forecastData || apiData ? (
+            <WeatherOverview forecastData={forecastData} apiData={apiData} />
           ) : (
             <FailedLoadingData />
           )}
@@ -82,25 +81,22 @@ const WeatherScreen = () => {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate("graphsScreen", { otherDaysData, city })
+                navigation.navigate("graphsScreen", { forecastData, city })
               }
               style={styles.activitiesAdviceButton}
             >
               <Text style={styles.activitiesAdviceText}>Graphs</Text>
             </TouchableOpacity>
           </View>
-          {apiData || probabilityOfRain ? (
+          {apiData || forecastData ? (
             <View style={styles.weatherDetailsContainer}>
-              <WeatherDetailBox
-                probabilityOfRain={probabilityOfRain}
-                apiData={apiData}
-              />
+              <WeatherDetailBox forecastData={forecastData} apiData={apiData} />
             </View>
           ) : (
             <FailedLoadingData />
           )}
-          {otherDaysData ? (
-            <OtherDaysWeather otherDaysData={otherDaysData} />
+          {forecastData ? (
+            <OtherDaysWeather forecastData={forecastData} />
           ) : (
             <FailedLoadingData />
           )}

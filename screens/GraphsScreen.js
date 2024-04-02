@@ -1,7 +1,6 @@
 import React from "react";
 import {
   View,
-  StyleSheet,
   ImageBackground,
   Text,
   StatusBar,
@@ -19,19 +18,19 @@ import FailedLoadingData from "../components/FailedLoadingData";
 
 const GraphsScreen = () => {
   const { params } = useRoute();
-  const { otherDaysData, city } = params;
+  const { forecastData, city } = params;
 
-  const labels = otherDaysData?.map((item) => {
+  const labels = forecastData?.map((item) => {
     const date = new Date(item.date);
     return date.toLocaleDateString("en-US", { weekday: "long" });
   });
 
-  const maxTempData = otherDaysData
+  const maxTempData = forecastData
     ? {
         labels,
         datasets: [
           {
-            data: otherDaysData.map((item) => item.temperature.maxtemp_c),
+            data: forecastData.map((item) => item.temperature.maxtemp_c),
             color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`,
             strokeWidth: 2,
           },
@@ -39,12 +38,12 @@ const GraphsScreen = () => {
       }
     : {};
 
-  const uvIndexData = otherDaysData
+  const uvIndexData = forecastData
     ? {
         labels,
         datasets: [
           {
-            data: otherDaysData.map((item) => item.temperature.uv),
+            data: forecastData.map((item) => item.temperature.uv),
             color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`,
             strokeWidth: 2,
           },
@@ -71,7 +70,7 @@ const GraphsScreen = () => {
         resizeMode="cover"
         style={styles.backgroundImage}
       >
-        {otherDaysData ? (
+        {forecastData ? (
           <View style={styles.lineChartView}>
             <Text style={styles.graphTitle}>{city} City - Max Temperature</Text>
             <LineChart

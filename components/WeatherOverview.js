@@ -3,8 +3,8 @@ import React from "react";
 import infobox from "../assets/infobox.png";
 import styles from "../styles/styleWeatherOverview";
 
-const WeatherOverview = ({ apiData, otherDaysData }) => {
-  const conditionIcon = otherDaysData[0]?.temperature?.condition.icon;
+const WeatherOverview = ({ apiData, forecastData }) => {
+  const conditionIcon = forecastData[0]?.temperature?.condition.icon;
 
   const getFormattedDate = () => {
     const today = new Date();
@@ -26,7 +26,7 @@ const WeatherOverview = ({ apiData, otherDaysData }) => {
           style={styles.infoBoxImage}
           resizeMode="cover"
         >
-          {apiData && otherDaysData ? (
+          {apiData && forecastData ? (
             <>
               <View style={styles.infoBoxHeader}>
                 <Text style={styles.cityNameText}>
@@ -41,8 +41,8 @@ const WeatherOverview = ({ apiData, otherDaysData }) => {
                     {Math.round(apiData.current.temp_c)}ºc
                   </Text>
                   <Text style={styles.minMaxTempText}>
-                    {Math.round(otherDaysData[0]?.temperature?.mintemp_c)}ºc /{" "}
-                    {Math.round(otherDaysData[0]?.temperature?.maxtemp_c)}ºc
+                    {Math.round(forecastData[0]?.temperature?.mintemp_c)}ºc /{" "}
+                    {Math.round(forecastData[0]?.temperature?.maxtemp_c)}ºc
                   </Text>
                   <Text style={styles.conditionText}>
                     {apiData?.current?.condition?.text}

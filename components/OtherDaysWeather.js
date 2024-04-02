@@ -2,10 +2,10 @@ import { Text, View, Image } from "react-native";
 import React from "react";
 import styles from "../styles/styleOtherDaysWeather";
 
-const OtherDaysWeather = ({ otherDaysData }) => {
+const OtherDaysWeather = ({ forecastData }) => {
   return (
     <View style={styles.container}>
-      {otherDaysData?.map((item, index) => (
+      {forecastData?.map((item, index) => (
         <View key={index} style={styles.dayBox}>
           <Text style={styles.dateText}>
             {new Date(item.date).toLocaleDateString("en-US", {
@@ -15,7 +15,7 @@ const OtherDaysWeather = ({ otherDaysData }) => {
           <Image
             style={styles.conditionIcon}
             source={{
-              uri: `http://${otherDaysData[index]?.temperature?.condition.icon}`,
+              uri: `http://${forecastData[index]?.temperature?.condition.icon}`,
             }}
           />
           <Text style={styles.maxTempText}>

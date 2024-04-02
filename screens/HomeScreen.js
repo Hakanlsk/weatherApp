@@ -9,7 +9,6 @@ import {
   ScrollView,
   TouchableOpacity,
   StatusBar,
-  KeyboardAvoidingView,
 } from "react-native";
 import { checkIfLocationEnabled, getCurrentLocation } from "../utils/Location";
 import cityNames from "../api/cityNames";
@@ -18,10 +17,6 @@ import { useNavigation } from "@react-navigation/native";
 import appIcon from "../assets/cevtorPng.png";
 
 import background from "../assets/background.jpg";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
 import styles from "../styles/styleHomeScreen";
 
 const HomeScreen = () => {
@@ -40,7 +35,7 @@ const HomeScreen = () => {
     };
 
     fetchData();
-  }, []);
+  }, [cityName]);
 
   const handleAcceptLocation = () => {
     if (cityName) {
@@ -99,13 +94,13 @@ const HomeScreen = () => {
                 </Text>
               </TouchableOpacity>
             ) : (
-              <Text style={styles.accepLocationText}>
+              <Text style={styles.errorText}>
                 location not found, check location settings
               </Text>
             )}
 
             <Text style={styles.subtitle1}>
-              Welcome to <Text style={styles.typeWeather}>TypeWeather</Text>{" "}
+              Welcome to <Text style={styles.typeWeather}>TypeWeather</Text>
             </Text>
             <Text style={styles.subtitle2}>
               Choose a location to see the weather forecast
@@ -136,7 +131,7 @@ const HomeScreen = () => {
               </ScrollView>
             ) : (
               searchText && (
-                <Text style={{ color: "red" }}>
+                <Text style={styles.errorText}>
                   please enter a valid city name
                 </Text>
               )

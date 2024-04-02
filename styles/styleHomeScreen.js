@@ -43,6 +43,10 @@ const styles = StyleSheet.create({
     color: "#FAFAFA",
     marginBottom: 10,
   },
+  subtitle2: {
+    fontSize: 14,
+    color: "#BFBFD4",
+  },
   typeWeather: {
     color: "#8FB2F5",
   },
@@ -58,9 +62,9 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "700",
   },
-  subtitle2: {
+  errorText: {
     fontSize: 14,
-    color: "#BFBFD4",
+    color: "red",
   },
   input: {
     marginTop: 30,

@@ -1,9 +1,17 @@
 import { Text, View } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "../styles/styleWeatherDetailBox";
 import weatherDataCategorys from "../utils/appConstants";
 
-const WeatherDetailBox = ({ apiData, probabilityOfRain }) => {
+const WeatherDetailBox = ({ apiData, forecastData }) => {
+  const [probabilityOfRain, setProbabilityOfRain] = useState();
+
+  useEffect(() => {
+    setProbabilityOfRain(forecastData[0].chance_of_rain);
+    console.log(probabilityOfRain);
+  }, []);
+
+  console.log("weatherDetail", forecastData[0].chance_of_rain);
   return (
     <>
       {weatherDataCategorys?.map((item, index) => (
