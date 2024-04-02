@@ -1,11 +1,28 @@
 import { View, Text, ImageBackground, Image } from "react-native";
 import React from "react";
+
 import infobox from "../assets/infobox.png";
+import rainBackground from "../assets/rain-background.jpg";
+import sunnyBackground from "../assets/sunny-background.jpg";
+
 import styles from "../styles/styleWeatherOverview";
 import FailedLoadingData from "./FailedLoadingData";
 
 const WeatherOverview = ({ apiData, forecastData }) => {
   const conditionIcon = forecastData[0]?.temperature?.condition.icon;
+  const probabilityOfRain = forecastData[0]?.chance_of_rain;
+
+  let backgroundImage;
+  if (probabilityOfRain < 40 && apiData?.current?.temp_c > 15) {
+    backgroundImage = sunnyBackground;
+  } else if (probabilityOfRain >= 40) {
+    backgroundImage = rainBackground;
+  } else {
+    backgroundImage = infobox;
+  }
+
+  console.log(backgroundImage);
+
   const getFormattedDate = () => {
     const today = new Date();
     const options = {
@@ -22,7 +39,7 @@ const WeatherOverview = ({ apiData, forecastData }) => {
     <>
       <View style={styles.infoBox}>
         <ImageBackground
-          source={infobox}
+          source={backgroundImage}
           style={styles.infoBoxImage}
           resizeMode="cover"
         >

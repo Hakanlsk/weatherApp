@@ -63,7 +63,7 @@ const WeatherScreen = () => {
         style={styles.backgroundImage}
       >
         <View style={styles.viewContainer}>
-          {forecastData || apiData ? (
+          {forecastData && apiData ? (
             <WeatherOverview forecastData={forecastData} apiData={apiData} />
           ) : (
             <FailedLoadingData />
