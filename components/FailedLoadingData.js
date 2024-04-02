@@ -16,7 +16,8 @@ const FailedLoadingData = () => {
         {isLoading && <ActivityIndicator size="large" color="red" />}
         {!isLoading && (
           <Text style={{ fontSize: 16, fontWeight: "bold", color: "red" }}>
-            Failed to get data from API, Please restart
+            Failed to get data from API, server is under maintenance, please try
+            again later
           </Text>
         )}
       </View>

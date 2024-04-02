@@ -2,10 +2,10 @@ import { View, Text, ImageBackground, Image } from "react-native";
 import React from "react";
 import infobox from "../assets/infobox.png";
 import styles from "../styles/styleWeatherOverview";
+import FailedLoadingData from "./FailedLoadingData";
 
 const WeatherOverview = ({ apiData, forecastData }) => {
   const conditionIcon = forecastData[0]?.temperature?.condition.icon;
-
   const getFormattedDate = () => {
     const today = new Date();
     const options = {
@@ -59,9 +59,7 @@ const WeatherOverview = ({ apiData, forecastData }) => {
               </View>
             </>
           ) : (
-            <View>
-              <Text>Yükleniyor</Text>
-            </View>
+            <FailedLoadingData />
           )}
         </ImageBackground>
       </View>

@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
     paddingVertical: hp("2%"),
   },
   activitiesAdviceButton: {
-    backgroundColor: "#8FB2F5",
+    borderWidth: 1,
+    borderColor: "#8FB2F5",
     paddingHorizontal: hp("1%"),
     paddingVertical: hp("0.5%"),
     borderRadius: 12,
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
   },
   activitiesAdviceText: {
-    color: "black",
+    color: "white",
     fontSize: hp("2%"),
     fontWeight: "700",
     alignItems: "center",

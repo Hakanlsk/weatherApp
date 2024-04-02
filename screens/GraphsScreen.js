@@ -43,7 +43,7 @@ const GraphsScreen = () => {
         labels,
         datasets: [
           {
-            data: forecastData.map((item) => item.temperature.uv),
+            data: forecastData.map((item) => item.chance_of_rain),
             color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`,
             strokeWidth: 2,
           },
@@ -80,7 +80,9 @@ const GraphsScreen = () => {
               chartConfig={chartConfig}
               bezier
             />
-            <Text style={styles.graphTitle}>{city} City - UV Index</Text>
+            <Text style={styles.graphTitle}>
+              {city} City - Probability of rain
+            </Text>
             <LineChart
               data={uvIndexData}
               width={wp("100%")}

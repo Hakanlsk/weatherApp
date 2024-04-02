@@ -7,8 +7,7 @@ import {
   StatusBar,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-import { useRoute } from "@react-navigation/native";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 import getWeatherData from "../api/wetherDataApi";
 import weatherDetails from "../api/weatherDetails";
@@ -29,7 +28,7 @@ const WeatherScreen = () => {
   const { city } = params;
 
   const [apiData, setApiData] = useState(null);
-  const [forecastData, setForecastData] = useState("");
+  const [forecastData, setForecastData] = useState(null);
 
   const generalWeatherData = async () => {
     try {
@@ -50,9 +49,10 @@ const WeatherScreen = () => {
   };
 
   useEffect(() => {
-    generalWeatherData();
-    weatherDetailsData();
+    Promise.all([weatherDetailsData(), generalWeatherData()]);
   }, [city]);
+
+  console.log(forecastData, apiData);
 
   return (
     <SafeAreaView style={styles.container}>
