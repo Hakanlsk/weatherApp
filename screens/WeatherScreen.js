@@ -16,11 +16,11 @@ import weatherDetails from "../api/weatherDetails";
 import WeatherDetailBox from "../components/WeatherDetailBox";
 import WeatherOverview from "../components/WeatherOverview";
 import OtherDaysWeather from "../components/OtherDaysWeather";
+import FailedLoadingData from "../components/FailedLoadingData";
 
 import background from "../assets/background.jpg";
 
 import styles from "../styles/styleWeatherScreen";
-import FailedLoadingData from "../components/FailedLoadingData";
 
 const WeatherScreen = () => {
   const navigation = useNavigation();
@@ -87,7 +87,7 @@ const WeatherScreen = () => {
               <Text style={styles.activitiesAdviceText}>Graphs</Text>
             </TouchableOpacity>
           </View>
-          {apiData || forecastData ? (
+          {apiData && forecastData ? (
             <View style={styles.weatherDetailsContainer}>
               <WeatherDetailBox forecastData={forecastData} apiData={apiData} />
             </View>

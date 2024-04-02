@@ -7,7 +7,7 @@ const WeatherDetailBox = ({ apiData, forecastData }) => {
   const [probabilityOfRain, setProbabilityOfRain] = useState();
 
   useEffect(() => {
-    setProbabilityOfRain(forecastData[0].chance_of_rain);
+    setProbabilityOfRain(forecastData[0]?.chance_of_rain);
     console.log(probabilityOfRain);
   }, []);
 
@@ -21,7 +21,7 @@ const WeatherDetailBox = ({ apiData, forecastData }) => {
             <Text style={style.weatherDetailsText}>{item.label}</Text>
           </View>
           <Text style={style.weatherDetailsTextRight}>
-            {apiData
+            {apiData && forecastData
               ? item.label === "Thermal sensation"
                 ? Math.round(apiData.current.temp_c) + "ºc"
                 : item.label === "Probability of rain"
