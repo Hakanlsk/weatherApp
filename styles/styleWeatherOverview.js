@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
   conditionIcon: {
-    width: 100,
-    height: 100,
+    width: hp("15%"),
+    height: hp("15%"),
   },
 });
 
