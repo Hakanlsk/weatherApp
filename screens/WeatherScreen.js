@@ -29,7 +29,6 @@ const WeatherScreen = () => {
   const { city } = params;
 
   const [apiData, setApiData] = useState(null);
-  const [probabilityOfRain, setProbabilityOfRain] = useState(null);
   const [forecastData, setForecastData] = useState("");
 
   const generalWeatherData = async () => {
