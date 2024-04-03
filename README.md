@@ -1,6 +1,6 @@
 # Hava Durumu ve Etkinlikler Uygulaması
 
-Bu uygulama, kullanıcının konum bilgisini veya istediği şehri aratarak bir şehir seçmesiyle seçilen şehre ait hava durumu bilgilerini ve o şehirde yapılacak etkinlikleri listeler. Kullanıcılar hava durumu bilgilerini öğrenebilir ve seyahat planları yaparken etkinlikleri keşfedebilirler.
+Bu uygulama React Native ve Expo ile geliştirilmiştir. Uygulama kullanıcının konum bilgisini veya istediği şehri aratarak bir şehir seçmesiyle seçilen şehre ait hava durumu bilgilerini ve o şehirde yapılacak etkinlikleri listeler. Kullanıcılar hava durumu bilgilerini öğrenebilir ve seyahat planları yaparken etkinlikleri keşfedebilirler.
 
 ## Uygulamaya Genel Bakış
 
@@ -49,7 +49,6 @@ Veriler yüklenirken, React Native'in ActivityIndicator bileşeni kullanılarak 
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/3ea1d48d-ed7b-42d5-9836-753d0f57cef2" alt="weathererrror" style="width: 20%; margin-right: 20px;">
 </div>
 
-
 ## Responsive Tasarım
 Not: Bazı Font Size değerleri figma tasarımına uygunluk açısından ekran boyutuna göre değişiklik göstermek yerine sabit değerler tercih edilmiştir.
 <div style="display: flex;">
@@ -58,3 +57,12 @@ Not: Bazı Font Size değerleri figma tasarımına uygunluk açısından ekran b
 <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/26a6b655-c57e-4c3b-9b8a-ffedc09a8911" alt="Resim 1" style="width: 20%; margin-right: 20px;">
 <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/a2b1f0f4-e279-40f9-8ebc-73258ced598a" alt="Resim 1" style="width: 35%; margin-right: 20px;">  
 </div>
+
+## Kullanılan Paketler
+
+    - Konum - Expo Location
+    - Router - React Navigation
+    - API İstekleri - Axios
+    - Responsive Tasarım - React Native Responsive Screen
+    - Grafikler - React Native Chart Kit
+
