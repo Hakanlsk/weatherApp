@@ -21,8 +21,6 @@ const WeatherOverview = ({ apiData, forecastData }) => {
     backgroundImage = infobox;
   }
 
-  console.log(backgroundImage);
-
   const getFormattedDate = () => {
     const today = new Date();
     const options = {

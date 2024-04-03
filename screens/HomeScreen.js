@@ -119,7 +119,11 @@ const HomeScreen = () => {
               <ScrollView>
                 {filteredCities.map((city, index) => (
                   <TouchableOpacity
-                    onPress={() => navigation.navigate("result", { city })}
+                    onPress={() => {
+                      navigation.navigate("result", { city });
+                      setSearchText("");
+                      setFilteredCities([]);
+                    }}
                     key={index}
                     style={styles.resultBox}
                   >
