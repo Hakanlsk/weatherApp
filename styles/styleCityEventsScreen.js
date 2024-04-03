@@ -66,6 +66,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: 20,
   },
+  noEventText: {
+    fontWeight: "600",
+    color: "red",
+    textAlign: "center",
+    marginTop: hp("10%"),
+  },
 });
 
 export default styles;

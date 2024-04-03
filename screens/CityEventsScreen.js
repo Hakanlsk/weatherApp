@@ -15,13 +15,13 @@ import cityEvents from "../api/cityEvents";
 import { AntDesign } from "@expo/vector-icons";
 import styles from "../styles/styleCityEventsScreen";
 import FailedLoadingData from "../components/FailedLoadingData";
+import NoEventsCity from "../components/NoEventsCity";
 
 const CityEventsScreen = () => {
   const { params } = useRoute();
   const { city } = params;
 
   const [eventsData, setEventsData] = useState([]);
-
   useEffect(() => {
     const getEvents = async () => {
       const events = await cityEvents(city);
@@ -60,7 +60,7 @@ const CityEventsScreen = () => {
         style={styles.backgroundImage}
       >
         <View style={styles.actitvitiesBoxContainer}>
-          {eventsData ? (
+          {eventsData && eventsData.length > 0 ? (
             <ScrollView style={styles.actitvitiesBox}>
               <Text style={styles.cityTitle}>{city} Events</Text>
               {Object.keys(groupedEvents).map((category) => (
@@ -110,6 +110,8 @@ const CityEventsScreen = () => {
                 </View>
               ))}
             </ScrollView>
+          ) : eventsData && eventsData.length === 0 ? (
+            <NoEventsCity />
           ) : (
             <FailedLoadingData />
           )}
