@@ -69,7 +69,7 @@ const WeatherScreen = () => {
             <FailedLoadingData />
           )}
 
-          <View style={{ flexDirection: "row" }}>
+          <View style={styles.row}>
             <TouchableOpacity
               onPress={() => navigation.navigate("cityEvents", { city })}
               style={styles.activitiesAdviceButton}

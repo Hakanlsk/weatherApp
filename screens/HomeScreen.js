@@ -24,7 +24,7 @@ const HomeScreen = () => {
 
   const [cityName, setCityName] = useState(null);
   const [locationServicesEnabled, setLocationServicesEnabled] = useState(false);
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState(null);
   const [filteredCities, setFilteredCities] = useState([]);
 
   useEffect(() => {
@@ -35,10 +35,11 @@ const HomeScreen = () => {
     };
 
     fetchData();
-  }, [cityName]);
+  }, []);
 
   const handleAcceptLocation = () => {
     if (cityName) {
+      console.log(cityName);
       setSearchText(cityName);
       filterCities(cityName);
     }

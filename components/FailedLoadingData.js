@@ -6,7 +6,7 @@ const FailedLoadingData = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 10000);
+    }, 8000);
 
     return () => clearTimeout(timeout);
   }, []);

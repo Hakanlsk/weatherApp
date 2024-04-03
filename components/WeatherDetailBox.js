@@ -6,7 +6,6 @@ import weatherDataCategorys from "../utils/appConstants";
 const WeatherDetailBox = ({ apiData, forecastData }) => {
   const probabilityOfRain = forecastData[0]?.chance_of_rain;
 
-  console.log("weatherDetail", forecastData[0].chance_of_rain);
   return (
     <>
       {weatherDataCategorys?.map((item, index) => (

@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     paddingVertical: hp("0.5%"),
     borderRadius: 12,
     marginVertical: 10,
-    marginHorizontal: 15,
+    marginHorizontal: wp("3%"),
   },
   activitiesAdviceText: {
     color: "white",
