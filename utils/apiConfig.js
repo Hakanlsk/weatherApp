@@ -1,5 +1,6 @@
 const API_KEY = "a80ad0a7e3fd427983490734230112";
-const EVENT_API_TOKEN = "KbIbgF2tskZsd6-vBx8gyok1MUodOVMaK3Ircp1Z";
+// const EVENT_API_TOKEN = "KbIbgF2tskZsd6-vBx8gyok1MUodOVMaK3Ircp1Z";
+const EVENT_API_TOKEN = "0nDvRbKhzECZK7Zw3tZXPkuCAw9HPUgba44O86PF";
 
 const SEARCH_API_URL = `http://api.weatherapi.com/v1/search.json?key=${API_KEY}`;
 const EVENT_API_URL = "https://api.predicthq.com/v1/events/";

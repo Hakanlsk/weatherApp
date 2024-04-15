@@ -35,7 +35,7 @@ const HomeScreen = () => {
     };
 
     fetchData();
-  }, []);
+  }, [locationServicesEnabled]);
 
   const handleAcceptLocation = () => {
     if (cityName) {
