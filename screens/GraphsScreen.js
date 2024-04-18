@@ -15,6 +15,7 @@ import {
 } from "react-native-responsive-screen";
 import styles from "../styles/styleGraphScreen";
 import FailedLoadingData from "../components/FailedLoadingData";
+import GoBackButton from "../components/GoBackButton";
 
 const GraphsScreen = () => {
   const { params } = useRoute();
@@ -72,6 +73,9 @@ const GraphsScreen = () => {
       >
         {forecastData ? (
           <View style={styles.lineChartView}>
+            <View style={styles.goBackButtonEventScreen}>
+                  <GoBackButton />
+            </View>
             <Text style={styles.graphTitle}>{city} City - Max Temperature</Text>
             <LineChart
               data={maxTempData}

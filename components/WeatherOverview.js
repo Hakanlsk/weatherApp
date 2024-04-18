@@ -1,5 +1,6 @@
-import { View, Text, ImageBackground, Image } from "react-native";
+import { View, Text, ImageBackground, Image, TouchableOpacity } from "react-native";
 import React from "react";
+
 
 import infobox from "../assets/infobox.png";
 import rainBackground from "../assets/rain-background.jpg";
@@ -7,6 +8,8 @@ import sunnyBackground from "../assets/sunny-background.jpg";
 
 import styles from "../styles/styleWeatherOverview";
 import FailedLoadingData from "./FailedLoadingData";
+import GoBackButton from "./GoBackButton";
+
 
 const WeatherOverview = ({ apiData, forecastData }) => {
   const conditionIcon = forecastData[0]?.temperature?.condition.icon;
@@ -44,10 +47,13 @@ const WeatherOverview = ({ apiData, forecastData }) => {
           {apiData && forecastData ? (
             <>
               <View style={styles.infoBoxHeader}>
+                <View>
                 <Text style={styles.cityNameText}>
                   {apiData?.location?.name}, {apiData?.location?.country}
                 </Text>
                 <Text style={styles.dateText}>{formattedDate}</Text>
+                </View>
+                <GoBackButton/>
               </View>
 
               <View style={styles.infoBoxFooter}>

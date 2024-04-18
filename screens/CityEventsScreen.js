@@ -16,6 +16,7 @@ import { AntDesign } from "@expo/vector-icons";
 import styles from "../styles/styleCityEventsScreen";
 import FailedLoadingData from "../components/FailedLoadingData";
 import NoEventsCity from "../components/NoEventsCity";
+import GoBackButton from "../components/GoBackButton";
 
 const CityEventsScreen = () => {
   const { params } = useRoute();
@@ -62,7 +63,12 @@ const CityEventsScreen = () => {
         <View style={styles.actitvitiesBoxContainer}>
           {eventsData && eventsData.length > 0 ? (
             <ScrollView style={styles.actitvitiesBox}>
-              <Text style={styles.cityTitle}>{city} Events</Text>
+              <View style={{ flexDirection: "row", justifyContent: "center" }}>
+                <Text style={styles.cityTitle}>{city} Events</Text>
+                <View style={styles.goBackButtonEventScreen}>
+                  <GoBackButton />
+                </View>
+              </View>
               {Object.keys(groupedEvents).map((category) => (
                 <View key={category}>
                   <Text style={styles.categoryTitle}>{category}</Text>

@@ -26,6 +26,7 @@ const HomeScreen = () => {
   const [locationServicesEnabled, setLocationServicesEnabled] = useState(false);
   const [searchText, setSearchText] = useState(null);
   const [filteredCities, setFilteredCities] = useState([]);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +36,7 @@ const HomeScreen = () => {
     };
 
     fetchData();
-  }, [locationServicesEnabled]);
+  }, []);
 
   const handleAcceptLocation = () => {
     if (cityName) {
@@ -64,6 +65,19 @@ const HomeScreen = () => {
     }
   };
 
+  const [errorMessageShow, setErrorMessageShow] = useState(false)
+
+  useEffect(() => {
+    if (!cityName) {
+      setErrorMessageShow(true);
+      const timeout = setTimeout(() => {
+        setErrorMessageShow(false);
+      }, 3000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [cityName]);
+  
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
@@ -94,7 +108,7 @@ const HomeScreen = () => {
                   Click to accept {cityName} as your location
                 </Text>
               </TouchableOpacity>
-            ) : (
+            ) : errorMessageShow&&(
               <Text style={styles.errorText}>
                 location not found, check location settings
               </Text>

@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     paddingTop: hp("2%"),
     paddingHorizontal: wp("4%"),
     flex: 1,
+    flexDirection:"row",
+    justifyContent:"space-between"
   },
   infoBoxFooter: {
     flexDirection: "row",

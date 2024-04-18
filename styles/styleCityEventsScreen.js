@@ -72,6 +72,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: hp("10%"),
   },
+  goBackButtonEventScreen:{
+    position:"absolute",
+    paddingRight:wp("80%")
+  }
 });
 
 export default styles;

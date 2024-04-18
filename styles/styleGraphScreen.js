@@ -17,12 +17,17 @@ const styles = StyleSheet.create({
   lineChartView: {
     flexDirection: "column",
     alignItems: "center",
+    paddingVertical:hp("4%")
   },
   graphTitle: {
     fontWeight: "700",
     color: "white",
     marginVertical: hp("2%"),
   },
+  goBackButtonEventScreen:{
+    position:"absolute",
+    paddingRight:wp("80%")
+  }
 });
 
 export default styles;
