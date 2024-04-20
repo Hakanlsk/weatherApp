@@ -8,17 +8,13 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-
 import getWeatherData from "../api/wetherDataApi";
 import weatherDetails from "../api/weatherDetails";
-
 import WeatherDetailBox from "../components/WeatherDetailBox";
 import WeatherOverview from "../components/WeatherOverview";
 import OtherDaysWeather from "../components/OtherDaysWeather";
 import FailedLoadingData from "../components/FailedLoadingData";
-
 import background from "../assets/background.jpg";
-
 import styles from "../styles/styleWeatherScreen";
 
 const WeatherScreen = () => {
@@ -51,8 +47,6 @@ const WeatherScreen = () => {
   useEffect(() => {
     Promise.all([weatherDetailsData(), generalWeatherData()]);
   }, [city]);
-
-  console.log(forecastData, apiData);
 
   return (
     <SafeAreaView style={styles.container}>

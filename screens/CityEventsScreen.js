@@ -8,10 +8,8 @@ import {
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useRoute } from "@react-navigation/native";
-
 import background from "../assets/background.jpg";
 import cityEvents from "../api/cityEvents";
-
 import { AntDesign } from "@expo/vector-icons";
 import styles from "../styles/styleCityEventsScreen";
 import FailedLoadingData from "../components/FailedLoadingData";
@@ -61,13 +59,14 @@ const CityEventsScreen = () => {
         style={styles.backgroundImage}
       >
         <View style={styles.actitvitiesBoxContainer}>
+          
           {eventsData && eventsData.length > 0 ? (
             <ScrollView style={styles.actitvitiesBox}>
               <View style={{ flexDirection: "row", justifyContent: "center" }}>
+              <View style={styles.goBackButtonEventScreen}>
+            <GoBackButton />
+          </View>
                 <Text style={styles.cityTitle}>{city} Events</Text>
-                <View style={styles.goBackButtonEventScreen}>
-                  <GoBackButton />
-                </View>
               </View>
               {Object.keys(groupedEvents).map((category) => (
                 <View key={category}>

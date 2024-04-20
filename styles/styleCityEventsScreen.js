@@ -66,11 +66,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: 20,
   },
+  noEventView:{
+    alignItems: "center",
+        justifyContent: "center",
+        marginVertical: hp("25%"),
+        width: wp("100%"),
+  },
   noEventText: {
-    fontWeight: "600",
-    color: "red",
-    textAlign: "center",
-    marginTop: hp("10%"),
+    fontSize: 16, fontWeight: "bold", color: "red", marginBottom:20
   },
   goBackButtonEventScreen:{
     position:"absolute",

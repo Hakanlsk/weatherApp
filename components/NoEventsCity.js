@@ -1,33 +1,27 @@
 import { Text, View, ActivityIndicator, Alert } from "react-native";
 import React, { useState, useEffect } from "react";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+import GoBackButton from "./GoBackButton";
+import styles from "../styles/styleCityEventsScreen";
 
 const NoEventsCity = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 3500);
 
     return () => clearTimeout(timeout);
   }, []);
   return (
-    <View
-      style={{
-        alignItems: "center",
-        justifyContent: "center",
-        marginVertical: hp("25%"),
-        width: wp("100%"),
-      }}
-    >
+    <View style={styles.noEventView}>
       {isLoading && <ActivityIndicator size="large" color="red" />}
       {!isLoading && (
-        <Text style={{ fontSize: 16, fontWeight: "bold", color: "red" }}>
-          No events were found for the city you selected
-        </Text>
+        <>
+          <Text style={styles.noEventText}>
+            No events were found for the city you selected
+          </Text>
+          <GoBackButton />
+        </>
       )}
     </View>
   );

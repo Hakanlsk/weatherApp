@@ -1,11 +1,8 @@
 import { View, Text, ImageBackground, Image, TouchableOpacity } from "react-native";
 import React from "react";
-
-
 import infobox from "../assets/infobox.png";
 import rainBackground from "../assets/rain-background.jpg";
 import sunnyBackground from "../assets/sunny-background.jpg";
-
 import styles from "../styles/styleWeatherOverview";
 import FailedLoadingData from "./FailedLoadingData";
 import GoBackButton from "./GoBackButton";

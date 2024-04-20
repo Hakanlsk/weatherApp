@@ -12,10 +12,8 @@ import {
 } from "react-native";
 import { checkIfLocationEnabled, getCurrentLocation } from "../utils/Location";
 import cityNames from "../api/cityNames";
-
 import { useNavigation } from "@react-navigation/native";
 import appIcon from "../assets/cevtorPng.png";
-
 import background from "../assets/background.jpg";
 import styles from "../styles/styleHomeScreen";
 
@@ -26,16 +24,7 @@ const HomeScreen = () => {
   const [locationServicesEnabled, setLocationServicesEnabled] = useState(false);
   const [searchText, setSearchText] = useState(null);
   const [filteredCities, setFilteredCities] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setLocationServicesEnabled(await checkIfLocationEnabled());
-      const LocationCity = await getCurrentLocation();
-      setCityName(LocationCity);
-    };
-
-    fetchData();
-  }, []);
+  const [errorMessageShow, setErrorMessageShow] = useState(false);
 
   const handleAcceptLocation = () => {
     setSearchText(cityName);
@@ -61,7 +50,15 @@ const HomeScreen = () => {
     }
   };
 
-  const [errorMessageShow, setErrorMessageShow] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      setLocationServicesEnabled(await checkIfLocationEnabled());
+      const LocationCity = await getCurrentLocation();
+      setCityName(LocationCity);
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     if (!cityName) {
@@ -104,7 +101,7 @@ const HomeScreen = () => {
                   Click to accept {cityName} as your location
                 </Text>
               </TouchableOpacity>
-            ) : (
+            ) :  (
               errorMessageShow && (
                 <Text style={styles.errorText}>
                   location not found, check location settings
