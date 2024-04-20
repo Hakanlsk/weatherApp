@@ -57,9 +57,8 @@ Hava sıcaklığı belirli bir dereceden fazlaysa ve yağmur ihtimali belirli bi
 
 <div style="display: flex;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/df23bbd6-6481-4533-8c01-db9b9f5e7fd5" alt="home-error" style="width: 20%; margin-right: 20px;">
-    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/612f7bfb-5759-4734-8816-f4bd63d2b430" alt="home-error" style="width: 20%; margin-right: 20px;">
+    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/1e4148fb-5be2-470b-8e8a-633124647419" alt="home-error" style="width: 20%; margin-right: 20px;">
 </div>
-
 
 ## Responsive Tasarım
 Not: Bazı Font Size değerleri figma tasarımına uygunluk açısından ekran boyutuna göre değişiklik göstermek yerine sabit değerler tercih edilmiştir.
