@@ -2,6 +2,8 @@
 
 Bu uygulama React Native ve Expo ile geliştirilmiştir. Uygulama kullanıcının konum bilgisini veya istediği şehri aratarak bir şehir seçmesiyle seçilen şehre ait hava durumu bilgilerini ve o şehirde yapılacak etkinlikleri listeler. Kullanıcılar hava durumu bilgilerini öğrenebilir ve seyahat planları yaparken etkinlikleri keşfedebilirler.
 
+NOT: Fotoğraflar uygulamanın en gücel haline ait değildir. Fotoğraflara ek olarak önceki sayfaya geçiş butonları eklenmiştir
+
 ## Uygulamaya Genel Bakış
 
 <div style="display: flex;">
@@ -48,6 +50,16 @@ Veriler yüklenirken, React Native'in ActivityIndicator bileşeni kullanılarak 
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/bc693bcb-532e-4c29-b75e-b0309298d4e8" alt="loading1" style="width: 20%; margin-right: 20px;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/3ea1d48d-ed7b-42d5-9836-753d0f57cef2" alt="weathererrror" style="width: 20%; margin-right: 20px;">
 </div>
+
+
+## Bazı Hava Durumlarına Özel Arka Plan Fotoğrafı
+Hava sıcaklığı belirli bir dereceden fazlaysa ve yağmur ihtimali belirli bir seviyeden azsa güneşli arka plan fotoğrafı, yağmur ihtimali belirli bir seviyeden fazlaysa yağmurlu arka plan fotoğrafı gösterilir.
+
+<div style="display: flex;">
+    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/df23bbd6-6481-4533-8c01-db9b9f5e7fd5" alt="home-error" style="width: 20%; margin-right: 20px;">
+    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/612f7bfb-5759-4734-8816-f4bd63d2b430" alt="home-error" style="width: 20%; margin-right: 20px;">
+</div>
+
 
 ## Responsive Tasarım
 Not: Bazı Font Size değerleri figma tasarımına uygunluk açısından ekran boyutuna göre değişiklik göstermek yerine sabit değerler tercih edilmiştir.
