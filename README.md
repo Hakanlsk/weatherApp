@@ -42,7 +42,7 @@ Bu sayfada, seçilen şehre ait bazı sayısal hava durumu bilgileri grafiklerle
 </div>
 
 ## Uyarı Mesajları ve Verilerin Yükleniyor Durumda Olduğu Bilgisi
-Ana ekranda input kısmına eğer kullanıcının girdiği şehir ismi api verilerindeki şehir isimlerinden herhangi biriyle eşleştirilemediyse ya da kullanıcı şehrin bulunması için yeterli sayıda harf girişi yapmadıysa (3) kullanıcıya kırmızı renkte "Lütfen geçerli bir şehir adı girin" mesajı gösterilir.
+Ana ekranda input kısmına eğer kullanıcının girdiği şehir ismi api verilerindeki şehir isimlerinden herhangi biriyle eşleştirilemediyse ya da kullanıcı şehrin bulunması için yeterli sayıda harf girişi yapmadıysa kullanıcıya kırmızı renkte "Lütfen geçerli bir şehir adı girin" mesajı gösterilir.
 Veriler yüklenirken, React Native'in ActivityIndicator bileşeni kullanılarak yükleniyor ikonu döndürülür. Eğer API'den veri gelmezse, ekranda kırmızı renkte "Veriler yüklenirken bir hata oluştu. Lütfen uygulamayı yeniden başlatın." şeklinde bir uyarı mesajı görüntülenir. Bu durumda kullanıcıya uygulamayı yeniden başlatması tavsiye edilir. 
 
 <div style="display: flex;">
