@@ -43,12 +43,14 @@ Bu sayfada, seçilen şehre ait bazı sayısal hava durumu bilgileri grafiklerle
 
 ## Uyarı Mesajları ve Verilerin Yükleniyor Durumda Olduğu Bilgisi
 Ana ekranda input kısmına eğer kullanıcının girdiği şehir ismi api verilerindeki şehir isimlerinden herhangi biriyle eşleştirilemediyse ya da kullanıcı şehrin bulunması için yeterli sayıda harf girişi yapmadıysa kullanıcıya kırmızı renkte "Lütfen geçerli bir şehir adı girin" mesajı gösterilir.
-Veriler yüklenirken, React Native'in ActivityIndicator bileşeni kullanılarak yükleniyor ikonu döndürülür. Eğer API'den veri gelmezse, ekranda kırmızı renkte "Veriler yüklenirken bir hata oluştu. Lütfen uygulamayı yeniden başlatın." şeklinde bir uyarı mesajı görüntülenir. Bu durumda kullanıcıya uygulamayı yeniden başlatması tavsiye edilir. 
+Hava durumu ekranında veriler yüklenirken, React Native'in ActivityIndicator bileşeni kullanılarak yükleniyor ikonu döndürülür. Eğer API'den veri gelmezse, ekranda kırmızı renkte "Veriler yüklenirken bir hata oluştu. Lütfen uygulamayı yeniden başlatın." şeklinde bir uyarı mesajı görüntülenir. Bu durumda kullanıcıya uygulamayı yeniden başlatması tavsiye edilir.
+Etkinlikler ekranına girildiğinde eğer şehre ait etkinlik yoksa kullanıcıya "Seçilen şehre ait etkinlik bulunamadı" uyarısı verilir ve geri dönebilmesi için önceki sayfaya geçiş butonu gösterilir.
 
 <div style="display: flex;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/ea94645a-9a32-45b8-b854-acc3a2d96706" alt="home-error" style="width: 20%; margin-right: 20px;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/bc693bcb-532e-4c29-b75e-b0309298d4e8" alt="loading1" style="width: 20%; margin-right: 20px;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/3ea1d48d-ed7b-42d5-9836-753d0f57cef2" alt="weathererrror" style="width: 20%; margin-right: 20px;">
+    <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/e53ad8e5-bc67-4fa8-acb9-80d4db1960b2" alt="weathererrror" style="width: 20%; margin-right: 20px;"> 
 </div>
 
 
