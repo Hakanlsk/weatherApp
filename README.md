@@ -4,7 +4,7 @@ Bu uygulama React Native ve Expo ile geliştirilmiştir. Uygulama kullanıcını
 
 NOT: Fotoğraflar uygulamanın en gücel haline ait değildir. Fotoğraflara ek olarak önceki sayfaya geçiş butonları eklenmiştir
 
-## Uygulamaya Genel Bakış
+## Uygulamaya Genel Bakış 
 
 <div style="display: flex;">
     <img src="https://github.com/Hakanlsk/weatherApp/assets/123507532/a554404c-a1eb-4b29-a1ba-2c874f15b7f4" alt="Resim 1" style="width: 20%; margin-right: 20px;">
